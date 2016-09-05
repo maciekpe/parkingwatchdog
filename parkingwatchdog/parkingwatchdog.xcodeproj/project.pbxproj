@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A4602001D7E29FC0069A9EE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4601FF1D7E29FC0069A9EE /* MapKit.framework */; };
 		3A7098941D7DF8EB0068154A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7098931D7DF8EB0068154A /* main.m */; };
 		3A7098971D7DF8EB0068154A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7098961D7DF8EB0068154A /* AppDelegate.m */; };
 		3A70989A1D7DF8EB0068154A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7098991D7DF8EB0068154A /* ViewController.m */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		0A72029B73CA02FF261FBE53 /* Pods-parkingwatchdog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parkingwatchdog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-parkingwatchdog/Pods-parkingwatchdog.debug.xcconfig"; sourceTree = "<group>"; };
+		3A4601FF1D7E29FC0069A9EE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3A70988F1D7DF8EB0068154A /* parkingwatchdog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = parkingwatchdog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7098931D7DF8EB0068154A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A7098951D7DF8EB0068154A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A4602001D7E29FC0069A9EE /* MapKit.framework in Frameworks */,
 				7621D854441B867C51AA80EA /* libPods-parkingwatchdog.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +162,7 @@
 		890961F57EF7C9C30A8F9119 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A4601FF1D7E29FC0069A9EE /* MapKit.framework */,
 				FC0544B0E2622E571BFB4DB7 /* libPods-parkingwatchdog.a */,
 			);
 			name = Frameworks;
@@ -235,6 +239,14 @@
 					3A70988E1D7DF8EB0068154A = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 5SL4ZE7KUS;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					3A7098A71D7DF8EB0068154A = {
 						CreatedOnToolsVersion = 7.3.1;
