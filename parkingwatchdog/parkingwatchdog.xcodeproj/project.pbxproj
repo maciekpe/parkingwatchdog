@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A7098941D7DF8EB0068154A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7098931D7DF8EB0068154A /* main.m */; };
+		3A7098971D7DF8EB0068154A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7098961D7DF8EB0068154A /* AppDelegate.m */; };
+		3A70989A1D7DF8EB0068154A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7098991D7DF8EB0068154A /* ViewController.m */; };
+		3A70989D1D7DF8EB0068154A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A70989B1D7DF8EB0068154A /* Main.storyboard */; };
+		3A70989F1D7DF8EB0068154A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A70989E1D7DF8EB0068154A /* Assets.xcassets */; };
+		3A7098A21D7DF8EB0068154A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7098A01D7DF8EB0068154A /* LaunchScreen.storyboard */; };
+		3A7098AD1D7DF8EB0068154A /* parkingwatchdogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7098AC1D7DF8EB0068154A /* parkingwatchdogTests.m */; };
+		3A7098B81D7DF8EB0068154A /* parkingwatchdogUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7098B71D7DF8EB0068154A /* parkingwatchdogUITests.m */; };
+		7621D854441B867C51AA80EA /* libPods-parkingwatchdog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0544B0E2622E571BFB4DB7 /* libPods-parkingwatchdog.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A7098A91D7DF8EB0068154A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A7098871D7DF8EB0068154A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A70988E1D7DF8EB0068154A;
+			remoteInfo = parkingwatchdog;
+		};
+		3A7098B41D7DF8EB0068154A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A7098871D7DF8EB0068154A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A70988E1D7DF8EB0068154A;
+			remoteInfo = parkingwatchdog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A72029B73CA02FF261FBE53 /* Pods-parkingwatchdog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parkingwatchdog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-parkingwatchdog/Pods-parkingwatchdog.debug.xcconfig"; sourceTree = "<group>"; };
+		3A70988F1D7DF8EB0068154A /* parkingwatchdog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = parkingwatchdog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A7098931D7DF8EB0068154A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3A7098951D7DF8EB0068154A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3A7098961D7DF8EB0068154A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3A7098981D7DF8EB0068154A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3A7098991D7DF8EB0068154A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3A70989C1D7DF8EB0068154A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A70989E1D7DF8EB0068154A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A7098A11D7DF8EB0068154A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A7098A31D7DF8EB0068154A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A7098A81D7DF8EB0068154A /* parkingwatchdogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = parkingwatchdogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A7098AC1D7DF8EB0068154A /* parkingwatchdogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = parkingwatchdogTests.m; sourceTree = "<group>"; };
+		3A7098AE1D7DF8EB0068154A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A7098B31D7DF8EB0068154A /* parkingwatchdogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = parkingwatchdogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A7098B71D7DF8EB0068154A /* parkingwatchdogUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = parkingwatchdogUITests.m; sourceTree = "<group>"; };
+		3A7098B91D7DF8EB0068154A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA1E802CB0BCFB32B57B7F04 /* Pods-parkingwatchdog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parkingwatchdog.release.xcconfig"; path = "Pods/Target Support Files/Pods-parkingwatchdog/Pods-parkingwatchdog.release.xcconfig"; sourceTree = "<group>"; };
+		FC0544B0E2622E571BFB4DB7 /* libPods-parkingwatchdog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-parkingwatchdog.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A70988C1D7DF8EB0068154A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7621D854441B867C51AA80EA /* libPods-parkingwatchdog.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A7098A51D7DF8EB0068154A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A7098B01D7DF8EB0068154A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A7098861D7DF8EB0068154A = {
+			isa = PBXGroup;
+			children = (
+				3A7098911D7DF8EB0068154A /* parkingwatchdog */,
+				3A7098AB1D7DF8EB0068154A /* parkingwatchdogTests */,
+				3A7098B61D7DF8EB0068154A /* parkingwatchdogUITests */,
+				3A7098901D7DF8EB0068154A /* Products */,
+				4555F883DB3D1847ADBED023 /* Pods */,
+				890961F57EF7C9C30A8F9119 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3A7098901D7DF8EB0068154A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A70988F1D7DF8EB0068154A /* parkingwatchdog.app */,
+				3A7098A81D7DF8EB0068154A /* parkingwatchdogTests.xctest */,
+				3A7098B31D7DF8EB0068154A /* parkingwatchdogUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A7098911D7DF8EB0068154A /* parkingwatchdog */ = {
+			isa = PBXGroup;
+			children = (
+				3A7098951D7DF8EB0068154A /* AppDelegate.h */,
+				3A7098961D7DF8EB0068154A /* AppDelegate.m */,
+				3A7098981D7DF8EB0068154A /* ViewController.h */,
+				3A7098991D7DF8EB0068154A /* ViewController.m */,
+				3A70989B1D7DF8EB0068154A /* Main.storyboard */,
+				3A70989E1D7DF8EB0068154A /* Assets.xcassets */,
+				3A7098A01D7DF8EB0068154A /* LaunchScreen.storyboard */,
+				3A7098A31D7DF8EB0068154A /* Info.plist */,
+				3A7098921D7DF8EB0068154A /* Supporting Files */,
+			);
+			path = parkingwatchdog;
+			sourceTree = "<group>";
+		};
+		3A7098921D7DF8EB0068154A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A7098931D7DF8EB0068154A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A7098AB1D7DF8EB0068154A /* parkingwatchdogTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A7098AC1D7DF8EB0068154A /* parkingwatchdogTests.m */,
+				3A7098AE1D7DF8EB0068154A /* Info.plist */,
+			);
+			path = parkingwatchdogTests;
+			sourceTree = "<group>";
+		};
+		3A7098B61D7DF8EB0068154A /* parkingwatchdogUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3A7098B71D7DF8EB0068154A /* parkingwatchdogUITests.m */,
+				3A7098B91D7DF8EB0068154A /* Info.plist */,
+			);
+			path = parkingwatchdogUITests;
+			sourceTree = "<group>";
+		};
+		4555F883DB3D1847ADBED023 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A72029B73CA02FF261FBE53 /* Pods-parkingwatchdog.debug.xcconfig */,
+				AA1E802CB0BCFB32B57B7F04 /* Pods-parkingwatchdog.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		890961F57EF7C9C30A8F9119 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC0544B0E2622E571BFB4DB7 /* libPods-parkingwatchdog.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A70988E1D7DF8EB0068154A /* parkingwatchdog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A7098BC1D7DF8EB0068154A /* Build configuration list for PBXNativeTarget "parkingwatchdog" */;
+			buildPhases = (
+				87AC729BFD09C1CF1AA400F0 /* [CP] Check Pods Manifest.lock */,
+				3A70988B1D7DF8EB0068154A /* Sources */,
+				3A70988C1D7DF8EB0068154A /* Frameworks */,
+				3A70988D1D7DF8EB0068154A /* Resources */,
+				142E78EB39F47533DF82EDE6 /* [CP] Embed Pods Frameworks */,
+				50761E714CF9D53248869D60 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = parkingwatchdog;
+			productName = parkingwatchdog;
+			productReference = 3A70988F1D7DF8EB0068154A /* parkingwatchdog.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A7098A71D7DF8EB0068154A /* parkingwatchdogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A7098BF1D7DF8EB0068154A /* Build configuration list for PBXNativeTarget "parkingwatchdogTests" */;
+			buildPhases = (
+				3A7098A41D7DF8EB0068154A /* Sources */,
+				3A7098A51D7DF8EB0068154A /* Frameworks */,
+				3A7098A61D7DF8EB0068154A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A7098AA1D7DF8EB0068154A /* PBXTargetDependency */,
+			);
+			name = parkingwatchdogTests;
+			productName = parkingwatchdogTests;
+			productReference = 3A7098A81D7DF8EB0068154A /* parkingwatchdogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3A7098B21D7DF8EB0068154A /* parkingwatchdogUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A7098C21D7DF8EB0068154A /* Build configuration list for PBXNativeTarget "parkingwatchdogUITests" */;
+			buildPhases = (
+				3A7098AF1D7DF8EB0068154A /* Sources */,
+				3A7098B01D7DF8EB0068154A /* Frameworks */,
+				3A7098B11D7DF8EB0068154A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A7098B51D7DF8EB0068154A /* PBXTargetDependency */,
+			);
+			name = parkingwatchdogUITests;
+			productName = parkingwatchdogUITests;
+			productReference = 3A7098B31D7DF8EB0068154A /* parkingwatchdogUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A7098871D7DF8EB0068154A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = mpe;
+				TargetAttributes = {
+					3A70988E1D7DF8EB0068154A = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5SL4ZE7KUS;
+					};
+					3A7098A71D7DF8EB0068154A = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5SL4ZE7KUS;
+						TestTargetID = 3A70988E1D7DF8EB0068154A;
+					};
+					3A7098B21D7DF8EB0068154A = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5SL4ZE7KUS;
+						TestTargetID = 3A70988E1D7DF8EB0068154A;
+					};
+				};
+			};
+			buildConfigurationList = 3A70988A1D7DF8EB0068154A /* Build configuration list for PBXProject "parkingwatchdog" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A7098861D7DF8EB0068154A;
+			productRefGroup = 3A7098901D7DF8EB0068154A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A70988E1D7DF8EB0068154A /* parkingwatchdog */,
+				3A7098A71D7DF8EB0068154A /* parkingwatchdogTests */,
+				3A7098B21D7DF8EB0068154A /* parkingwatchdogUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A70988D1D7DF8EB0068154A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A7098A21D7DF8EB0068154A /* LaunchScreen.storyboard in Resources */,
+				3A70989F1D7DF8EB0068154A /* Assets.xcassets in Resources */,
+				3A70989D1D7DF8EB0068154A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A7098A61D7DF8EB0068154A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A7098B11D7DF8EB0068154A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		142E78EB39F47533DF82EDE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-parkingwatchdog/Pods-parkingwatchdog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50761E714CF9D53248869D60 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-parkingwatchdog/Pods-parkingwatchdog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87AC729BFD09C1CF1AA400F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A70988B1D7DF8EB0068154A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A70989A1D7DF8EB0068154A /* ViewController.m in Sources */,
+				3A7098971D7DF8EB0068154A /* AppDelegate.m in Sources */,
+				3A7098941D7DF8EB0068154A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A7098A41D7DF8EB0068154A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A7098AD1D7DF8EB0068154A /* parkingwatchdogTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A7098AF1D7DF8EB0068154A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A7098B81D7DF8EB0068154A /* parkingwatchdogUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A7098AA1D7DF8EB0068154A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A70988E1D7DF8EB0068154A /* parkingwatchdog */;
+			targetProxy = 3A7098A91D7DF8EB0068154A /* PBXContainerItemProxy */;
+		};
+		3A7098B51D7DF8EB0068154A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A70988E1D7DF8EB0068154A /* parkingwatchdog */;
+			targetProxy = 3A7098B41D7DF8EB0068154A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3A70989B1D7DF8EB0068154A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A70989C1D7DF8EB0068154A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3A7098A01D7DF8EB0068154A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A7098A11D7DF8EB0068154A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A7098BA1D7DF8EB0068154A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3A7098BB1D7DF8EB0068154A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A7098BD1D7DF8EB0068154A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A72029B73CA02FF261FBE53 /* Pods-parkingwatchdog.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = parkingwatchdog/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.mpe.parkingwatchdog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		3A7098BE1D7DF8EB0068154A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA1E802CB0BCFB32B57B7F04 /* Pods-parkingwatchdog.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = parkingwatchdog/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.mpe.parkingwatchdog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		3A7098C01D7DF8EB0068154A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = parkingwatchdogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.mpe.parkingwatchdogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/parkingwatchdog.app/parkingwatchdog";
+			};
+			name = Debug;
+		};
+		3A7098C11D7DF8EB0068154A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = parkingwatchdogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.mpe.parkingwatchdogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/parkingwatchdog.app/parkingwatchdog";
+			};
+			name = Release;
+		};
+		3A7098C31D7DF8EB0068154A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = parkingwatchdogUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.mpe.parkingwatchdogUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = parkingwatchdog;
+			};
+			name = Debug;
+		};
+		3A7098C41D7DF8EB0068154A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = parkingwatchdogUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.mpe.parkingwatchdogUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = parkingwatchdog;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A70988A1D7DF8EB0068154A /* Build configuration list for PBXProject "parkingwatchdog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A7098BA1D7DF8EB0068154A /* Debug */,
+				3A7098BB1D7DF8EB0068154A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A7098BC1D7DF8EB0068154A /* Build configuration list for PBXNativeTarget "parkingwatchdog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A7098BD1D7DF8EB0068154A /* Debug */,
+				3A7098BE1D7DF8EB0068154A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A7098BF1D7DF8EB0068154A /* Build configuration list for PBXNativeTarget "parkingwatchdogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A7098C01D7DF8EB0068154A /* Debug */,
+				3A7098C11D7DF8EB0068154A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A7098C21D7DF8EB0068154A /* Build configuration list for PBXNativeTarget "parkingwatchdogUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A7098C31D7DF8EB0068154A /* Debug */,
+				3A7098C41D7DF8EB0068154A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A7098871D7DF8EB0068154A /* Project object */;
+}

@@ -1,0 +1,24 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "fad5fc66-066b-4d3e-88e6-8c8e37570a90++8317" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "fad5fc66-066b-4d3e-88e6-8c8e37570a90++8317" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "92277021-5C23-4FB5-9704-9A963BB64CF9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "fad5fc66-066b-4d3e-88e6-8c8e37570a90++8317" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "parkingwatchdog",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "parkingwatchdog\/parkingwatchdog.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/chinczyk.pd\/repos\/pd",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "fad5fc66-066b-4d3e-88e6-8c8e37570a90++8317"
+    }
+  ]
+}
