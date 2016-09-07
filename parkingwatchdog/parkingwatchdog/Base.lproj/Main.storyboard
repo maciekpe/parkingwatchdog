@@ -1,26 +1,100 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="heX-d7-GSB">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="UQv-3g-9pU">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="heX-d7-GSB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S74-Ls-EMD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="T6J-Yy-Icl">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="EBd-HE-UQh" kind="relationship" relationship="rootViewController" id="k5J-V3-o3x"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIJ-2d-71l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-285" y="344"/>
+        </scene>
+        <!--Watchdog-->
+        <scene sceneID="tW3-y8-Wh4">
+            <objects>
+                <viewController title="Watchdog" id="EBd-HE-UQh" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="JCt-o1-nh8"/>
+                        <viewControllerLayoutGuide type="bottom" id="8pX-Ce-aHC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="Yhw-kU-u69">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulldog.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eph-K7-Ewo">
+                                <rect key="frame" x="204" y="72" width="192" height="203"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="192" id="6ok-6J-ziu"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRF-FK-iF2">
+                                <rect key="frame" x="166" y="295" width="268" height="43"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="bR8-UW-uQ3"/>
+                                    <constraint firstAttribute="height" constant="43" id="o5B-Rt-uwR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Odczytaj">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="... proszę czekać ..." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmg-T0-cfl">
+                                <rect key="frame" x="166" y="346" width="268" height="169"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="169" id="MdS-ld-AlV"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eph-K7-Ewo" firstAttribute="top" secondItem="JCt-o1-nh8" secondAttribute="bottom" constant="8" symbolic="YES" id="Cpk-42-0Sb"/>
+                            <constraint firstItem="Vmg-T0-cfl" firstAttribute="top" secondItem="yRF-FK-iF2" secondAttribute="bottom" constant="8" symbolic="YES" id="EQY-r5-CSt"/>
+                            <constraint firstItem="eph-K7-Ewo" firstAttribute="centerX" secondItem="yRF-FK-iF2" secondAttribute="centerX" id="Mul-8K-gP7"/>
+                            <constraint firstItem="yRF-FK-iF2" firstAttribute="trailing" secondItem="Vmg-T0-cfl" secondAttribute="trailing" id="N5B-bG-E1I"/>
+                            <constraint firstItem="8pX-Ce-aHC" firstAttribute="top" secondItem="Vmg-T0-cfl" secondAttribute="bottom" constant="41" id="NA4-Hw-vhk"/>
+                            <constraint firstItem="eph-K7-Ewo" firstAttribute="centerX" secondItem="Yhw-kU-u69" secondAttribute="centerX" id="b9M-c1-0sE"/>
+                            <constraint firstItem="yRF-FK-iF2" firstAttribute="leading" secondItem="Vmg-T0-cfl" secondAttribute="leading" id="fla-u7-vo9"/>
+                            <constraint firstItem="yRF-FK-iF2" firstAttribute="top" secondItem="eph-K7-Ewo" secondAttribute="bottom" constant="20" id="gXn-Gd-czY"/>
+                        </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="stop" id="6XT-Tx-ryj"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="hCe-h2-Vkf"/>
+                        <barButtonItem systemItem="play" id="GUV-ex-PST"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="Dgw-Am-ON9"/>
+                    <connections>
+                        <outlet property="textView" destination="Vmg-T0-cfl" id="Eg9-mD-PlF"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgO-AG-FwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="520" y="344"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bulldog.jpg" width="761" height="660"/>
+    </resources>
 </document>

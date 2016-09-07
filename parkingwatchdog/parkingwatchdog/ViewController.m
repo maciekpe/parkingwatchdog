@@ -9,10 +9,15 @@
 #import "ViewController.h"
 #import "GTLService.h"
 #import "GTMOAuth2ViewControllerTouch.h"
+#import "LocationService.h"
+#import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface ViewController ()
+@interface ViewController ()<CLLocationManagerDelegate>
 
 @property (nonatomic, strong) GTLService *service;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -32,8 +37,33 @@ static NSString *const kClientID = @"829224129199-o2i8n6lijmj02sqftomb2g0h5gtan4
                                                       clientSecret:nil];
     //NSLog(@"Start");
     //[self listMajors];
+    _locationMgr = [self createLocationManager];
+    self.locationMgr.delegate = self;
+    [self.locationMgr startUpdatingLocation];
     NSLog(@"END");
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (CLLocationManager* ) createLocationManager {
+    if ([CLLocationManager locationServicesEnabled]){
+     NSLog(@"OK");
+    } else {
+     NSLog(@"dupa");   
+    }
+    CLLocationManager* locationManager = [[CLLocationManager alloc] init];
+    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    locationManager.distanceFilter = 10;
+    if ([locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+        [locationManager requestAlwaysAuthorization];
+    }
+    if ([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [locationManager requestWhenInUseAuthorization];
+    }
+    return locationManager;
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    NSLog(@"didUpdateLocations ");
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -126,8 +156,8 @@ static NSString *const kClientID = @"829224129199-o2i8n6lijmj02sqftomb2g0h5gtan4
                                [places insertObject:row[i] atIndex:i-1];
                             }
                         }
-                        [output appendFormat:@"[360->%@] \n [136->%@] \n [137->%@] \n [356->%@] \n [28->%@]",  places[0], places[1], places[2],  places[3], places[4]];
-                        [self showAlert:dateString message:output];
+                        [output appendFormat:@"[360->%@]\n[136->%@]\n[137->%@]\n[356->%@]\n[28->%@]",  places[0], places[1], places[2],  places[3], places[4]];
+                        //[self showAlert:dateString message:output];
 
                     }
                     //[output appendFormat:@"%@ , %@, %@\n", row[0],  row[1], row[2]];
@@ -138,6 +168,10 @@ static NSString *const kClientID = @"829224129199-o2i8n6lijmj02sqftomb2g0h5gtan4
         }
         //self.output.text = output;
         NSLog(@"OUT %@.", output);
+        [_textView setText:output];
+        [_textView setTextAlignment:NSTextAlignmentCenter];
+        [_textView setFont:[UIFont boldSystemFontOfSize:16]];
+        [_textView setTextColor:[UIColor blueColor]];
     } else {
         NSMutableString *message = [[NSMutableString alloc] init];
         [message appendFormat:@"Error getting sheet data: %@\n", error.localizedDescription];

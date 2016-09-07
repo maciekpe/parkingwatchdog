@@ -12,10 +12,12 @@
 		3A7098971D7DF8EB0068154A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7098961D7DF8EB0068154A /* AppDelegate.m */; };
 		3A70989A1D7DF8EB0068154A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7098991D7DF8EB0068154A /* ViewController.m */; };
 		3A70989D1D7DF8EB0068154A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A70989B1D7DF8EB0068154A /* Main.storyboard */; };
-		3A70989F1D7DF8EB0068154A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A70989E1D7DF8EB0068154A /* Assets.xcassets */; };
 		3A7098A21D7DF8EB0068154A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7098A01D7DF8EB0068154A /* LaunchScreen.storyboard */; };
 		3A7098AD1D7DF8EB0068154A /* parkingwatchdogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7098AC1D7DF8EB0068154A /* parkingwatchdogTests.m */; };
 		3A7098B81D7DF8EB0068154A /* parkingwatchdogUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7098B71D7DF8EB0068154A /* parkingwatchdogUITests.m */; };
+		3A7CC6531D7F6B7400451FFB /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CC6521D7F6B7400451FFB /* LocationService.m */; };
+		3A8004371D80B35000088462 /* bulldog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A8004361D80B35000088462 /* bulldog.jpg */; };
+		3A8004391D80B83E00088462 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8004381D80B83E00088462 /* Media.xcassets */; };
 		7621D854441B867C51AA80EA /* libPods-parkingwatchdog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0544B0E2622E571BFB4DB7 /* libPods-parkingwatchdog.a */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +48,6 @@
 		3A7098981D7DF8EB0068154A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3A7098991D7DF8EB0068154A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3A70989C1D7DF8EB0068154A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3A70989E1D7DF8EB0068154A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A7098A11D7DF8EB0068154A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A7098A31D7DF8EB0068154A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A7098A81D7DF8EB0068154A /* parkingwatchdogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = parkingwatchdogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +56,10 @@
 		3A7098B31D7DF8EB0068154A /* parkingwatchdogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = parkingwatchdogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7098B71D7DF8EB0068154A /* parkingwatchdogUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = parkingwatchdogUITests.m; sourceTree = "<group>"; };
 		3A7098B91D7DF8EB0068154A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A7CC6521D7F6B7400451FFB /* LocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationService.m; sourceTree = "<group>"; };
+		3A7CC6541D7F6B9000451FFB /* LocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
+		3A8004361D80B35000088462 /* bulldog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bulldog.jpg; sourceTree = "<group>"; };
+		3A8004381D80B83E00088462 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		AA1E802CB0BCFB32B57B7F04 /* Pods-parkingwatchdog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parkingwatchdog.release.xcconfig"; path = "Pods/Target Support Files/Pods-parkingwatchdog/Pods-parkingwatchdog.release.xcconfig"; sourceTree = "<group>"; };
 		FC0544B0E2622E571BFB4DB7 /* libPods-parkingwatchdog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-parkingwatchdog.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -111,12 +116,15 @@
 		3A7098911D7DF8EB0068154A /* parkingwatchdog */ = {
 			isa = PBXGroup;
 			children = (
+				3A8004381D80B83E00088462 /* Media.xcassets */,
+				3A8004361D80B35000088462 /* bulldog.jpg */,
 				3A7098951D7DF8EB0068154A /* AppDelegate.h */,
 				3A7098961D7DF8EB0068154A /* AppDelegate.m */,
 				3A7098981D7DF8EB0068154A /* ViewController.h */,
+				3A7CC6541D7F6B9000451FFB /* LocationService.h */,
 				3A7098991D7DF8EB0068154A /* ViewController.m */,
+				3A7CC6521D7F6B7400451FFB /* LocationService.m */,
 				3A70989B1D7DF8EB0068154A /* Main.storyboard */,
-				3A70989E1D7DF8EB0068154A /* Assets.xcassets */,
 				3A7098A01D7DF8EB0068154A /* LaunchScreen.storyboard */,
 				3A7098A31D7DF8EB0068154A /* Info.plist */,
 				3A7098921D7DF8EB0068154A /* Supporting Files */,
@@ -286,8 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A7098A21D7DF8EB0068154A /* LaunchScreen.storyboard in Resources */,
-				3A70989F1D7DF8EB0068154A /* Assets.xcassets in Resources */,
 				3A70989D1D7DF8EB0068154A /* Main.storyboard in Resources */,
+				3A8004391D80B83E00088462 /* Media.xcassets in Resources */,
+				3A8004371D80B35000088462 /* bulldog.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +371,7 @@
 			files = (
 				3A70989A1D7DF8EB0068154A /* ViewController.m in Sources */,
 				3A7098971D7DF8EB0068154A /* AppDelegate.m in Sources */,
+				3A7CC6531D7F6B7400451FFB /* LocationService.m in Sources */,
 				3A7098941D7DF8EB0068154A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

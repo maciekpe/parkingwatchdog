@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LocationService.h"
 
 @interface ViewController : UIViewController
-
-
+    @property (nonatomic, strong, readonly) LocationService* locationService;
+    @property (nonatomic, strong, readonly) CLLocationManager* locationMgr;
 @end
 
