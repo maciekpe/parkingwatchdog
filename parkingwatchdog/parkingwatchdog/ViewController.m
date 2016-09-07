@@ -52,7 +52,7 @@ static NSString *const kClientID = @"829224129199-o2i8n6lijmj02sqftomb2g0h5gtan4
     }
     CLLocationManager* locationManager = [[CLLocationManager alloc] init];
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
-    locationManager.distanceFilter = 10;
+    locationManager.distanceFilter = 100;
     if ([locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
         [locationManager requestAlwaysAuthorization];
     }
