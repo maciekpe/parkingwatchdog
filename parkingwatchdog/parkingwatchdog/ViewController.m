@@ -50,6 +50,7 @@ static NSString *const kHomeURL = @"comgooglemaps://?daddr=Faraona+11,+Pruszkow&
 }
 
 - (void)initViewElements {;
+    self.navigationItem.title = @"WatchDog";
     if(_workBtn != nil){
         _workBtn.layer.cornerRadius = 5;
     }
@@ -280,6 +281,12 @@ static NSString *const kHomeURL = @"comgooglemaps://?daddr=Faraona+11,+Pruszkow&
     NSLog(@"freeCount [%d]", freeCount);
     NSLog(@"myCount [%d]", myCount);
     NSString* reserved = myCount != 0 ? @"OK" : @"NO";
+    if(myCount == 0 && freeCount < 5) {
+        NSMutableString *msg = [[NSMutableString alloc] init];
+            [msg appendFormat:@"GO! [%@][FREE->%d][%@] reserve now\n",  dateRowSelector, freeCount, reserved];
+        [self sendNotificationWith:msg withDelay:60*60*2];
+         NSLog(@"notification [%@]", msg);
+    }
     
     [output appendFormat:@"[%@][FREE->%d][%@]\n",  dateRowSelector, freeCount, reserved];
     return [output copy];
@@ -300,9 +307,9 @@ static NSString *const kHomeURL = @"comgooglemaps://?daddr=Faraona+11,+Pruszkow&
         NSDate *now_plus_5 = [now dateByAddingTimeInterval:60*60*24*5];
         
         NSArray *places = [self getPlacesFrom:rows byDate:now];
-        
         NSString *reportMsg = [self getReportMessage:places];
         [self sendNotificationWith:reportMsg withDelay:1200];
+         NSLog(@"notification [%@]", reportMsg);
         [self setLeftMonit: reportMsg];
         
         NSMutableString *monit = [[NSMutableString alloc] init];

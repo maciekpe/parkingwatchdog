@@ -6,13 +6,17 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Watchdog-->
         <scene sceneID="UQv-3g-9pU">
             <objects>
-                <navigationController toolbarHidden="NO" id="heX-d7-GSB" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="heX-d7-GSB" userLabel="Watchdog" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="S74-Ls-EMD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="T6J-Yy-Icl">
                         <rect key="frame" x="0.0" y="556" width="600" height="44"/>
@@ -80,7 +84,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="brak danych" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqD-KC-la6">
                                         <rect key="frame" x="8" y="31" width="143" height="250"/>
                                         <color key="backgroundColor" white="0.93894190440000003" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.35156947570000002" green="0.38045427729999998" blue="0.44090987570000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -88,11 +92,17 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="brak danych" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmg-T0-cfl">
                                         <rect key="frame" x="155" y="31" width="143" height="250"/>
                                         <color key="backgroundColor" white="0.93894190436241609" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.35156947570000002" green="0.38045427729999998" blue="0.44090987570000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                     </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Today &lt;--&gt; Future" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6E-4o-fTW">
+                                        <rect key="frame" x="67" y="2" width="173" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.77619104989999999" green="0.83346071440000002" blue="0.95256696429999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -102,10 +112,13 @@
                                     <constraint firstItem="Vmg-T0-cfl" firstAttribute="leading" secondItem="NqD-KC-la6" secondAttribute="trailing" constant="4" id="ByP-Ka-sEG"/>
                                     <constraint firstItem="NqD-KC-la6" firstAttribute="top" secondItem="xXB-MJ-FNn" secondAttribute="top" constant="31" id="Iog-ia-4y3"/>
                                     <constraint firstItem="NqD-KC-la6" firstAttribute="centerY" secondItem="xXB-MJ-FNn" secondAttribute="centerY" id="LUl-hV-3dK"/>
+                                    <constraint firstItem="R6E-4o-fTW" firstAttribute="top" secondItem="xXB-MJ-FNn" secondAttribute="top" constant="2" id="Pth-3b-wl0"/>
                                     <constraint firstItem="Vmg-T0-cfl" firstAttribute="centerY" secondItem="xXB-MJ-FNn" secondAttribute="centerY" id="RKK-3U-1bR"/>
                                     <constraint firstItem="Vmg-T0-cfl" firstAttribute="height" secondItem="NqD-KC-la6" secondAttribute="height" id="ZUc-Pe-mfy"/>
                                     <constraint firstItem="Vmg-T0-cfl" firstAttribute="top" secondItem="xXB-MJ-FNn" secondAttribute="top" constant="31" id="cQN-7q-IKu"/>
+                                    <constraint firstItem="R6E-4o-fTW" firstAttribute="centerX" secondItem="xXB-MJ-FNn" secondAttribute="centerX" id="eed-88-ohg"/>
                                     <constraint firstItem="NqD-KC-la6" firstAttribute="leading" secondItem="xXB-MJ-FNn" secondAttribute="leading" constant="8" id="myU-2F-XNH"/>
+                                    <constraint firstItem="R6E-4o-fTW" firstAttribute="top" secondItem="xXB-MJ-FNn" secondAttribute="top" constant="4" id="p2H-PN-EB7"/>
                                 </constraints>
                             </view>
                         </subviews>
