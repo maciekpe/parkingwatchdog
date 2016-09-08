@@ -37,29 +37,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulldog.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eph-K7-Ewo">
-                                <rect key="frame" x="204" y="72" width="192" height="203"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="192" id="6ok-6J-ziu"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRF-FK-iF2">
-                                <rect key="frame" x="166" y="295" width="268" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jU4-s6-QuS">
+                                <rect key="frame" x="186" y="138" width="229" height="33"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="268" id="bR8-UW-uQ3"/>
-                                    <constraint firstAttribute="height" constant="43" id="o5B-Rt-uwR"/>
+                                    <constraint firstAttribute="height" constant="33" id="dGP-eh-vub"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="Odczytaj">
+                                <state key="normal" title="dom">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="wayToHomeAction:" destination="EBd-HE-UQh" eventType="touchDown" id="nM0-wH-hW6"/>
+                                </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="... proszę czekać ..." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmg-T0-cfl">
-                                <rect key="frame" x="166" y="346" width="268" height="169"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHB-Si-GC3">
+                                <rect key="frame" x="186" y="184" width="229" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="169" id="MdS-ld-AlV"/>
+                                    <constraint firstAttribute="height" constant="35" id="Swq-pV-yb2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="analiza">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="analysisAction:" destination="EBd-HE-UQh" eventType="touchDown" id="XP5-qB-hFx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRF-FK-iF2">
+                                <rect key="frame" x="186" y="92" width="229" height="33"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="229" id="f6y-UE-Lvn"/>
+                                    <constraint firstAttribute="height" constant="33" id="wPS-Ve-5HY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="praca">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="wayToWorkAction:" destination="EBd-HE-UQh" eventType="touchDown" id="O4i-Kf-sLq"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="brak danych" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmg-T0-cfl">
+                                <rect key="frame" x="211" y="271" width="178" height="250"/>
+                                <color key="backgroundColor" white="0.93894190436241609" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="178" id="vjZ-AQ-MqE"/>
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
@@ -69,24 +97,34 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eph-K7-Ewo" firstAttribute="top" secondItem="JCt-o1-nh8" secondAttribute="bottom" constant="8" symbolic="YES" id="Cpk-42-0Sb"/>
-                            <constraint firstItem="Vmg-T0-cfl" firstAttribute="top" secondItem="yRF-FK-iF2" secondAttribute="bottom" constant="8" symbolic="YES" id="EQY-r5-CSt"/>
-                            <constraint firstItem="eph-K7-Ewo" firstAttribute="centerX" secondItem="yRF-FK-iF2" secondAttribute="centerX" id="Mul-8K-gP7"/>
-                            <constraint firstItem="yRF-FK-iF2" firstAttribute="trailing" secondItem="Vmg-T0-cfl" secondAttribute="trailing" id="N5B-bG-E1I"/>
-                            <constraint firstItem="8pX-Ce-aHC" firstAttribute="top" secondItem="Vmg-T0-cfl" secondAttribute="bottom" constant="41" id="NA4-Hw-vhk"/>
-                            <constraint firstItem="eph-K7-Ewo" firstAttribute="centerX" secondItem="Yhw-kU-u69" secondAttribute="centerX" id="b9M-c1-0sE"/>
-                            <constraint firstItem="yRF-FK-iF2" firstAttribute="leading" secondItem="Vmg-T0-cfl" secondAttribute="leading" id="fla-u7-vo9"/>
-                            <constraint firstItem="yRF-FK-iF2" firstAttribute="top" secondItem="eph-K7-Ewo" secondAttribute="bottom" constant="20" id="gXn-Gd-czY"/>
+                            <constraint firstItem="Vmg-T0-cfl" firstAttribute="top" secondItem="wHB-Si-GC3" secondAttribute="bottom" constant="52" id="8jE-Wc-BFa"/>
+                            <constraint firstItem="yRF-FK-iF2" firstAttribute="centerX" secondItem="Yhw-kU-u69" secondAttribute="centerX" id="DPs-fQ-rij"/>
+                            <constraint firstItem="yRF-FK-iF2" firstAttribute="leading" secondItem="jU4-s6-QuS" secondAttribute="leading" id="G2F-ZG-BbR"/>
+                            <constraint firstItem="Vmg-T0-cfl" firstAttribute="centerX" secondItem="Yhw-kU-u69" secondAttribute="centerX" id="Smp-ru-5WA"/>
+                            <constraint firstItem="yRF-FK-iF2" firstAttribute="top" secondItem="JCt-o1-nh8" secondAttribute="bottom" constant="28" id="UrN-az-TWI"/>
+                            <constraint firstItem="wHB-Si-GC3" firstAttribute="centerX" secondItem="Yhw-kU-u69" secondAttribute="centerX" id="Zid-qG-RIh"/>
+                            <constraint firstItem="jU4-s6-QuS" firstAttribute="leading" secondItem="wHB-Si-GC3" secondAttribute="leading" id="i1W-oi-MTw"/>
+                            <constraint firstItem="wHB-Si-GC3" firstAttribute="top" secondItem="jU4-s6-QuS" secondAttribute="bottom" constant="13" id="o7A-mx-Mxk"/>
+                            <constraint firstItem="jU4-s6-QuS" firstAttribute="centerX" secondItem="Yhw-kU-u69" secondAttribute="centerX" id="ozP-oh-Rnd"/>
+                            <constraint firstItem="8pX-Ce-aHC" firstAttribute="top" secondItem="Vmg-T0-cfl" secondAttribute="bottom" constant="35" id="xfh-B9-wng"/>
+                            <constraint firstItem="jU4-s6-QuS" firstAttribute="top" secondItem="yRF-FK-iF2" secondAttribute="bottom" constant="13" id="zTa-Ct-FPb"/>
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem systemItem="stop" id="6XT-Tx-ryj"/>
+                        <barButtonItem systemItem="stop" id="6XT-Tx-ryj">
+                            <connections>
+                                <action selector="exitAction:" destination="EBd-HE-UQh" id="BIc-w7-fzY"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="hCe-h2-Vkf"/>
-                        <barButtonItem systemItem="play" id="GUV-ex-PST"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="Dgw-Am-ON9"/>
                     <connections>
+                        <outlet property="analysisBtn" destination="wHB-Si-GC3" id="3bT-N2-66D"/>
+                        <outlet property="homeBtn" destination="jU4-s6-QuS" id="MTZ-ji-j40"/>
+                        <outlet property="mainView" destination="Yhw-kU-u69" id="Krj-LI-JuR"/>
                         <outlet property="textView" destination="Vmg-T0-cfl" id="Eg9-mD-PlF"/>
+                        <outlet property="workBtn" destination="yRF-FK-iF2" id="XYK-q8-vCR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgO-AG-FwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -94,7 +132,4 @@
             <point key="canvasLocation" x="520" y="344"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="bulldog.jpg" width="761" height="660"/>
-    </resources>
 </document>

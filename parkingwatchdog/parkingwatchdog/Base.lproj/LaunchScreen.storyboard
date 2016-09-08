@@ -9,7 +9,6 @@
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
@@ -20,13 +19,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulldog.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Wth-oW-1P3">
-                                <rect key="frame" x="51" y="49" width="482" height="212"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="212" id="nuq-6R-tPL"/>
-                                </constraints>
+                                <rect key="frame" x="51" y="56" width="498" height="212"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking Watchdog" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qwc-aC-ElC">
-                                <rect key="frame" x="83" y="269" width="435" height="250"/>
+                                <rect key="frame" x="83" y="276" width="435" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="3pI-Hx-ERL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mariusz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahu-tT-prr">
+                                <rect key="frame" x="83" y="416" width="435" height="75"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="be faster then" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ls-cP-KQ7">
+                                <rect key="frame" x="83" y="346" width="435" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="G8Y-bm-uor"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -34,16 +48,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Wth-oW-1P3" secondAttribute="trailing" constant="47" id="16L-Co-L7x"/>
-                            <constraint firstItem="Wth-oW-1P3" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="31" id="As1-iJ-9fH"/>
-                            <constraint firstItem="Wth-oW-1P3" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="29" id="G5K-4k-yXv"/>
-                            <constraint firstItem="Qwc-aC-ElC" firstAttribute="top" secondItem="Wth-oW-1P3" secondAttribute="bottom" constant="8" symbolic="YES" id="HK6-Gr-MQs"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Qwc-aC-ElC" secondAttribute="bottom" constant="81" id="Iqn-JI-9Tz"/>
-                            <constraint firstItem="Qwc-aC-ElC" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="63" id="Tk6-Aq-Hfq"/>
-                            <constraint firstItem="Qwc-aC-ElC" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bVH-zc-h7h"/>
+                            <constraint firstItem="Ahu-tT-prr" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0C7-Td-nkV"/>
+                            <constraint firstItem="6ls-cP-KQ7" firstAttribute="top" secondItem="Wth-oW-1P3" secondAttribute="bottom" constant="78" id="1zT-9L-C49"/>
+                            <constraint firstItem="Wth-oW-1P3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="5eD-h8-9W8"/>
+                            <constraint firstItem="6ls-cP-KQ7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="E9a-hc-5IJ"/>
+                            <constraint firstItem="Qwc-aC-ElC" firstAttribute="top" secondItem="Wth-oW-1P3" secondAttribute="bottom" constant="8" symbolic="YES" id="HIA-h8-qvo"/>
+                            <constraint firstItem="6ls-cP-KQ7" firstAttribute="leading" secondItem="Ahu-tT-prr" secondAttribute="leading" id="J3v-Aq-cOS"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="6ls-cP-KQ7" secondAttribute="bottom" constant="179" id="JeX-w5-oSn"/>
+                            <constraint firstItem="Qwc-aC-ElC" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Sca-rw-jm1"/>
+                            <constraint firstItem="Ahu-tT-prr" firstAttribute="top" secondItem="Qwc-aC-ElC" secondAttribute="bottom" constant="65" id="X7i-Zn-MeN"/>
+                            <constraint firstItem="Qwc-aC-ElC" firstAttribute="leading" secondItem="6ls-cP-KQ7" secondAttribute="leading" id="aeC-SI-OWk"/>
+                            <constraint firstItem="Wth-oW-1P3" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="36" id="fLS-7r-1Ni"/>
+                            <constraint firstItem="Qwc-aC-ElC" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="63" id="hxS-zF-VbV"/>
+                            <constraint firstItem="Wth-oW-1P3" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="31" id="n84-H6-Bxx"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Ahu-tT-prr" secondAttribute="bottom" constant="109" id="tP7-PQ-tWq"/>
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-266" y="135"/>
         </scene>

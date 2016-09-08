@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "parkingwatchdog/ViewController.m"
-            timestampString = "494978747.529961"
+            timestampString = "495059754.286233"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
-            landmarkName = "-displayMajorsWithServiceTicket:finishedWithObject:error:"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "-displayPlacesForTodayWithServiceTicket:finishedWithObject:error:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "parkingwatchdog/ViewController.m"
-            timestampString = "494978747.529961"
+            timestampString = "495059754.286233"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "-displayMajorsWithServiceTicket:finishedWithObject:error:"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "-displayPlacesForTodayWithServiceTicket:finishedWithObject:error:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "parkingwatchdog/ViewController.m"
-            timestampString = "494978747.529961"
+            timestampString = "495059754.286233"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "-displayMajorsWithServiceTicket:finishedWithObject:error:"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "-displayPlacesForTodayWithServiceTicket:finishedWithObject:error:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

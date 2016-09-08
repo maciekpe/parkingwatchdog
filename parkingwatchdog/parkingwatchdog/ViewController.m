@@ -18,6 +18,10 @@
 
 @property (nonatomic, strong) GTLService *service;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) IBOutlet UIView *mainView;
+@property (weak, nonatomic) IBOutlet UIButton *workBtn;
+@property (weak, nonatomic) IBOutlet UIButton *homeBtn;
+@property (weak, nonatomic) IBOutlet UIButton *analysisBtn;
 
 @end
 
@@ -27,6 +31,13 @@ static NSString *const kClientID = @"829224129199-o2i8n6lijmj02sqftomb2g0h5gtan4
 @implementation ViewController
 
 @synthesize service = _service;
+
+- (IBAction)exitAction:(id)sender {
+    UIApplication *app = [UIApplication sharedApplication];
+    [app performSelector:@selector(suspend)];
+    [NSThread sleepForTimeInterval:2.0];
+    exit(0);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -39,7 +50,20 @@ static NSString *const kClientID = @"829224129199-o2i8n6lijmj02sqftomb2g0h5gtan4
     //[self listMajors];
     _locationMgr = [self createLocationManager];
     self.locationMgr.delegate = self;
-    [self.locationMgr startUpdatingLocation];
+    //[self.locationMgr startUpdatingLocation];
+    
+    if(_workBtn != nil){
+        _workBtn.layer.cornerRadius = 5;
+    }
+    
+    if(_homeBtn != nil){
+        _homeBtn.layer.cornerRadius = 5;
+    }
+    
+    if(_analysisBtn != nil){
+        _analysisBtn.layer.cornerRadius = 5;
+    }
+    
     NSLog(@"END");
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -67,13 +91,6 @@ static NSString *const kClientID = @"829224129199-o2i8n6lijmj02sqftomb2g0h5gtan4
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    if (!self.service.authorizer.canAuthorize) {
-        // Not yet authorized, request authorization by pushing the login UI onto the UI stack.
-        [self presentViewController:[self createAuthController] animated:YES completion:nil];
-        
-    } else {
-        [self listMajors];
-    }
 }
 
 - (GTMOAuth2ViewControllerTouch *)createAuthController {
@@ -111,7 +128,7 @@ static NSString *const kClientID = @"829224129199-o2i8n6lijmj02sqftomb2g0h5gtan4
     // Dispose of any resources that can be recreated.
 }
 
-- (void)listMajors {
+- (void)showPlacesForToday {
     NSString *baseUrl = @"https://sheets.googleapis.com/v4/spreadsheets/";
     NSString *spreadsheetId = @"1jClAjuaKaIHeygHsYOxmAL4pQbZ0u6_hT7i6d1j7Mt0";
     NSString *range = @"September!A:F";
@@ -122,13 +139,43 @@ static NSString *const kClientID = @"829224129199-o2i8n6lijmj02sqftomb2g0h5gtan4
     [self.service fetchObjectWithURL:[NSURL URLWithString:baseUrl]
                          objectClass:[GTLObject class]
                             delegate:self
-                   didFinishSelector:@selector(displayMajorsWithServiceTicket:finishedWithObject:error:)];
+                   didFinishSelector:@selector(displayPlacesForTodayWithServiceTicket:finishedWithObject:error:)];
+}
+- (IBAction)wayToWorkAction:(id)sender {
+    if ([[UIApplication sharedApplication] canOpenURL:
+         [NSURL URLWithString:@"comgooglemaps://"]]) {
+        [[UIApplication sharedApplication] openURL:
+         [NSURL URLWithString:@"comgooglemaps://?saddr=Faraona+11,+Pruszkow&daddr=Aleje+Jerozolimskie+92,+Warszawa&views=traffic&directionsmode=driving"]];
+    } else {
+        NSLog(@"Can't use comgooglemaps://");
+    }
+}
+- (IBAction)wayToHomeAction:(id)sender {
+    if ([[UIApplication sharedApplication] canOpenURL:
+         [NSURL URLWithString:@"comgooglemaps://"]]) {
+        [[UIApplication sharedApplication] openURL:
+         [NSURL URLWithString:@"comgooglemaps://?daddr=Faraona+11,+Pruszkow&saddr=Aleje+Jerozolimskie+92,+Warszawa&views=traffic&directionsmode=driving"]];
+    } else {
+        NSLog(@"Can't use comgooglemaps://");
+    }
+}
+- (IBAction)analysisAction:(id)sender {
+    if (!self.service.authorizer.canAuthorize) {
+        // Not yet authorized, request authorization by pushing the login UI onto the UI stack.
+        [self presentViewController:[self createAuthController] animated:YES completion:nil];
+        
+    } else {
+        [self showPlacesForToday];
+    }
 }
 
-- (void)displayMajorsWithServiceTicket:(GTLServiceTicket *)ticket
+- (void)displayPlacesForTodayWithServiceTicket:(GTLServiceTicket *)ticket
                     finishedWithObject:(GTLObject *)object
                                  error:(NSError *)error {
     NSLog(@"Result");
+    //NSDate *now = [NSDate date];
+    //NSDate *tommorow = [now dateByAddingTimeInterval:60*60*24*1];
+    //NSDate *dayAfterTommorow = [now dateByAddingTimeInterval:60*60*24*1];
     
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     
@@ -157,7 +204,11 @@ static NSString *const kClientID = @"829224129199-o2i8n6lijmj02sqftomb2g0h5gtan4
                             }
                         }
                         [output appendFormat:@"[360->%@]\n[136->%@]\n[137->%@]\n[356->%@]\n[28->%@]",  places[0], places[1], places[2],  places[3], places[4]];
-                        //[self showAlert:dateString message:output];
+                        [output appendString:@"\n\n----------------------\n\n"];
+                        UILocalNotification *notification = [[UILocalNotification alloc] init];
+                        notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:1200];
+                        notification.alertBody = output;
+                        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 
                     }
                     //[output appendFormat:@"%@ , %@, %@\n", row[0],  row[1], row[2]];
@@ -168,10 +219,13 @@ static NSString *const kClientID = @"829224129199-o2i8n6lijmj02sqftomb2g0h5gtan4
         }
         //self.output.text = output;
         NSLog(@"OUT %@.", output);
-        [_textView setText:output];
-        [_textView setTextAlignment:NSTextAlignmentCenter];
-        [_textView setFont:[UIFont boldSystemFontOfSize:16]];
-        [_textView setTextColor:[UIColor blueColor]];
+        _textView.layer.cornerRadius=5;
+        _textView.text = output;
+        _textView.textAlignment=NSTextAlignmentCenter;
+        _textView.font = [UIFont boldSystemFontOfSize:16];
+        _textView.textColor=[UIColor blackColor];
+        
+        
     } else {
         NSMutableString *message = [[NSMutableString alloc] init];
         [message appendFormat:@"Error getting sheet data: %@\n", error.localizedDescription];

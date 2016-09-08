@@ -16,7 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    sleep(5);
+    sleep(2);
     if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
     }
@@ -29,11 +29,11 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-     NSLog(@"applicationDidEnterBackground");
-    UILocalNotification *notification = [[UILocalNotification alloc] init];
-    notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
-    notification.alertBody = @"24 hours passed since last visit :(";
-    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+//     NSLog(@"applicationDidEnterBackground");
+//    UILocalNotification *notification = [[UILocalNotification alloc] init];
+//    notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
+//    notification.alertBody = @"24 hours passed since last visit :(";
+//    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
