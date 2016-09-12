@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "parkingwatchdog/ViewController.m"
-            timestampString = "495070772.303894"
+            timestampString = "495411411.047383"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
+            startingLineNumber = "353"
+            endingLineNumber = "353"
             landmarkName = "-countOcurrencesIn:byElementValue:"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "parkingwatchdog/ViewController.m"
-            timestampString = "495070772.303894"
+            timestampString = "495411411.047383"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "269"
-            endingLineNumber = "269"
+            startingLineNumber = "354"
+            endingLineNumber = "354"
             landmarkName = "-countOcurrencesIn:byElementValue:"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "parkingwatchdog/ViewController.m"
-            timestampString = "495070772.303894"
+            timestampString = "495411411.047383"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "272"
-            endingLineNumber = "272"
+            startingLineNumber = "357"
+            endingLineNumber = "357"
             landmarkName = "-countOcurrencesIn:byElementValue:"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "parkingwatchdog/ViewController.m"
-            timestampString = "495070772.303894"
+            timestampString = "495411411.047383"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "302"
-            endingLineNumber = "302"
+            startingLineNumber = "411"
+            endingLineNumber = "411"
             landmarkName = "-processQuerySheetResult:finishedWithObject:error:"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "parkingwatchdog/ViewController.m"
-            timestampString = "495070772.303894"
+            timestampString = "495411103.139179"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "237"
-            endingLineNumber = "237"
+            startingLineNumber = "266"
+            endingLineNumber = "266"
             landmarkName = "-findRowElements:bySelector:"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "parkingwatchdog/ViewController.m"
-            timestampString = "495070772.303894"
+            timestampString = "495411103.139179"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
+            startingLineNumber = "267"
+            endingLineNumber = "267"
             landmarkName = "-findRowElements:bySelector:"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,12 +154,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "parkingwatchdog/ViewController.m"
-            timestampString = "495070772.303894"
+            timestampString = "495411103.139179"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "248"
-            endingLineNumber = "248"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
             landmarkName = "-findRowElements:bySelector:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "parkingwatchdog/ViewController.m"
+            timestampString = "495401515.569104"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "place2Number"
+            landmarkType = "19">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "parkingwatchdog/ViewController.m"
+            timestampString = "495401517.829948"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "place1Number"
+            landmarkType = "19">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "parkingwatchdog/ViewController.m"
+            timestampString = "495411411.047383"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "426"
+            endingLineNumber = "426"
+            landmarkName = "-processQuerySheetResult:finishedWithObject:error:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -23,6 +23,33 @@
 @property (weak, nonatomic) IBOutlet UIButton *homeBtn;
 @property (weak, nonatomic) IBOutlet UIButton *analysisBtn;
 @property (weak, nonatomic) IBOutlet UITextView *textViewLeft;
+@property (weak, nonatomic) IBOutlet UIButton *place0Number;
+@property (weak, nonatomic) IBOutlet UIButton *place1Number;
+@property (weak, nonatomic) IBOutlet UIButton *place2Number;
+@property (weak, nonatomic) IBOutlet UIButton *place3Number;
+@property (weak, nonatomic) IBOutlet UIButton *place4Number;
+@property (weak, nonatomic) IBOutlet UIButton *place0How;
+@property (weak, nonatomic) IBOutlet UIButton *place1How;
+@property (weak, nonatomic) IBOutlet UIButton *place2How;
+@property (weak, nonatomic) IBOutlet UIButton *place3How;
+@property (weak, nonatomic) IBOutlet UIButton *place4How;
+
+@property (weak, nonatomic) IBOutlet UIButton *dayOfMonth0;
+@property (weak, nonatomic) IBOutlet UIButton *dayOfMonth1;
+@property (weak, nonatomic) IBOutlet UIButton *dayOfMonth2;
+@property (weak, nonatomic) IBOutlet UIButton *dayOfMonth3;
+@property (weak, nonatomic) IBOutlet UIButton *dayOfMonth4;
+@property (weak, nonatomic) IBOutlet UIButton *freedays0;
+@property (weak, nonatomic) IBOutlet UIButton *freedays1;
+@property (weak, nonatomic) IBOutlet UIButton *freedays2;
+@property (weak, nonatomic) IBOutlet UIButton *freedays3;
+@property (weak, nonatomic) IBOutlet UIButton *freedays4;
+@property (weak, nonatomic) IBOutlet UIButton *satus0;
+@property (weak, nonatomic) IBOutlet UIButton *satus1;
+@property (weak, nonatomic) IBOutlet UIButton *satus2;
+@property (weak, nonatomic) IBOutlet UIButton *satus3;
+@property (weak, nonatomic) IBOutlet UIButton *satus4;
+
 
 @end
 
@@ -38,7 +65,7 @@ static NSString *const kHomeURL = @"comgooglemaps://?daddr=Faraona+11,+Pruszkow&
 - (IBAction)exitAction:(id)sender {
     UIApplication *app = [UIApplication sharedApplication];
     [app performSelector:@selector(suspend)];
-    [NSThread sleepForTimeInterval:2.0];
+    [NSThread sleepForTimeInterval:1.0];
     exit(0);
 }
 
@@ -65,10 +92,12 @@ static NSString *const kHomeURL = @"comgooglemaps://?daddr=Faraona+11,+Pruszkow&
     
     if(_textViewRight != nil){
         _textViewRight.layer.cornerRadius=5;
+        [_textViewRight setHidden:true];
     }
     
     if(_textViewLeft != nil){
         _textViewLeft.layer.cornerRadius=5;
+        [_textViewLeft setHidden:true];
     }
     
 
@@ -254,6 +283,62 @@ static NSString *const kHomeURL = @"comgooglemaps://?daddr=Faraona+11,+Pruszkow&
     return [output copy];
 }
 
+- (void) processDailyReport:(NSArray*) places {
+    NSMutableString *output = [[NSMutableString alloc] init];
+    [output appendFormat:@"[360->%@]\n[136->%@]\n[137->%@]\n[356->%@]\n[28->%@]",  places[0], places[1], places[2],  places[3], places[4]];
+    [self processButton:_place0How withValue:places[0] withGreen:[places[0] containsString:@"MaciekP"] withRed:NO withGrey:[places[0] containsString:@"WOLNE"]];
+    [self processButton:_place1How withValue:places[1] withGreen:[places[1] containsString:@"MaciekP"] withRed:NO withGrey:[places[1] containsString:@"WOLNE"]];
+    [self processButton:_place2How withValue:places[2] withGreen:[places[2] containsString:@"MaciekP"] withRed:NO withGrey:[places[2] containsString:@"WOLNE"]];
+    [self processButton:_place3How withValue:places[3] withGreen:[places[3] containsString:@"MaciekP"] withRed:NO withGrey:[places[3] containsString:@"WOLNE"]];
+    [self processButton:_place4How withValue:places[4] withGreen:[places[4] containsString:@"MaciekP"] withRed:NO withGrey:[places[4] containsString:@"WOLNE"]];
+    [self processButton:_place0Number withValue:@"360" withGreen:[places[0] containsString:@"MaciekP"] withRed:NO withGrey:[places[0] containsString:@"WOLNE"]];
+    [self processButton:_place1Number withValue:@"136" withGreen:[places[1] containsString:@"MaciekP"] withRed:NO withGrey:[places[1] containsString:@"WOLNE"]];
+    [self processButton:_place2Number withValue:@"137" withGreen:[places[2] containsString:@"MaciekP"] withRed:NO withGrey:[places[2] containsString:@"WOLNE"]];
+    [self processButton:_place3Number withValue:@"356" withGreen:[places[3] containsString:@"MaciekP"] withRed:NO withGrey:[places[3] containsString:@"WOLNE"]];
+    [self processButton:_place4Number withValue:@"28" withGreen:[places[4] containsString:@"MaciekP"] withRed:NO withGrey:[places[4] containsString:@"WOLNE"]];
+    
+}
+
+- (void) processFutureReport:(NSArray*) places {
+    NSMutableString *output = [[NSMutableString alloc] init];
+    [output appendFormat:@"[360->%@]\n[136->%@]\n[137->%@]\n[356->%@]\n[28->%@]",  places[0], places[1], places[2],  places[3], places[4]];
+    [self processButton:_place0How withValue:places[0] withGreen:[places[0] containsString:@"MaciekP"] withRed:NO withGrey:[places[0] containsString:@"WOLNE"]];
+    [self processButton:_place1How withValue:places[1] withGreen:[places[1] containsString:@"MaciekP"] withRed:NO withGrey:[places[1] containsString:@"WOLNE"]];
+    [self processButton:_place2How withValue:places[2] withGreen:[places[2] containsString:@"MaciekP"] withRed:NO withGrey:[places[2] containsString:@"WOLNE"]];
+    [self processButton:_place3How withValue:places[3] withGreen:[places[3] containsString:@"MaciekP"] withRed:NO withGrey:[places[3] containsString:@"WOLNE"]];
+    [self processButton:_place4How withValue:places[4] withGreen:[places[4] containsString:@"MaciekP"] withRed:NO withGrey:[places[4] containsString:@"WOLNE"]];
+    [self processButton:_place0Number withValue:@"360" withGreen:[places[0] containsString:@"MaciekP"] withRed:NO withGrey:[places[0] containsString:@"WOLNE"]];
+    [self processButton:_place1Number withValue:@"136" withGreen:[places[1] containsString:@"MaciekP"] withRed:NO withGrey:[places[1] containsString:@"WOLNE"]];
+    [self processButton:_place2Number withValue:@"137" withGreen:[places[2] containsString:@"MaciekP"] withRed:NO withGrey:[places[2] containsString:@"WOLNE"]];
+    [self processButton:_place3Number withValue:@"356" withGreen:[places[3] containsString:@"MaciekP"] withRed:NO withGrey:[places[3] containsString:@"WOLNE"]];
+    [self processButton:_place4Number withValue:@"28" withGreen:[places[4] containsString:@"MaciekP"] withRed:NO withGrey:[places[4] containsString:@"WOLNE"]];
+    
+}
+
+- (void) processButton: (UIButton*) button withValue: (NSString*) text withGreen:(BOOL) isGreen withRed:(BOOL) isRed withGrey:(BOOL) isGrey{
+    int random = arc4random_uniform(4);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, random * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [button setTitle:text forState:UIControlStateNormal];
+        button.layer.cornerRadius = 5;
+        if(isGreen){
+            [button setBackgroundColor:[UIColor greenColor]];
+        }
+        if(isRed){
+            [button setBackgroundColor:[UIColor redColor]];
+        }
+        if(isGrey){
+            [button setBackgroundColor:[UIColor grayColor]];
+        }
+        [button.titleLabel setFont:[UIFont boldSystemFontOfSize:14]];
+        [button setNeedsLayout];
+        [button layoutIfNeeded];
+    });
+    
+    
+
+}
+
+
 - (NSArray*) getPlacesFrom:(NSArray*)rows  byDate:(NSDate*) date {
     NSString *dateRowSelector = [self getRowSelector:date];
     NSLog(@"dateRowSelector %@", dateRowSelector);
@@ -292,6 +377,30 @@ static NSString *const kHomeURL = @"comgooglemaps://?daddr=Faraona+11,+Pruszkow&
     return [output copy];
 }
 
+- (NSArray*) getFastReportVector:(NSArray*) rows byDate:(NSDate*) date {
+    NSString *dateRowSelector = [self getShortRowSelector:date];
+    NSArray *places = [self getPlacesFrom:rows byDate:date];
+    int freeCount = [self countOcurrencesIn:places byElementValue:@"WOLNE"];
+    int myCount = [self countOcurrencesIn:places byElementValue:@"MaciekP"];
+    NSLog(@"freeCount [%d]", freeCount);
+    NSLog(@"myCount [%d]", myCount);
+    NSMutableArray *result = [NSMutableArray arrayWithObjects:dateRowSelector, nil];
+    [result addObject: [NSNumber numberWithInt:freeCount]];
+    [result addObject: [NSNumber numberWithInt:myCount]];
+    return [result copy];
+}
+
+- (void) processFastReport:(NSArray*) rows byDate:(NSDate*) date withButtonDay: (UIButton*) dayButton withButtonFree: (UIButton*) freeButton withButtonStatus: (UIButton*) statusButton {
+    NSArray *vector = [self getFastReportVector:rows byDate:date];
+    NSString* value = vector[0];
+    int freeCount = [vector[1] intValue];
+    int myCount = [vector[2] intValue];
+    NSString* reserved = myCount != 0 ? @"OK" : @"NO";
+    [self processButton:dayButton withValue:value withGreen:(myCount > 0) withRed:((myCount == 0) && (freeCount < 5)) withGrey:((myCount == 0) && (freeCount == 5))];
+    [self processButton:freeButton withValue:[NSString stringWithFormat:@"%d", freeCount] withGreen:(myCount > 0) withRed:((myCount == 0) && (freeCount < 5)) withGrey:((myCount == 0) && (freeCount == 5))];
+    [self processButton:statusButton withValue:reserved withGreen:(myCount > 0) withRed:((myCount == 0) && (freeCount < 5)) withGrey:((myCount == 0) && (freeCount == 5))];
+}
+
 - (void)processQuerySheetResult:(GTLServiceTicket *)ticket
                     finishedWithObject:(GTLObject *)object
                                  error:(NSError *)error {
@@ -312,6 +421,8 @@ static NSString *const kHomeURL = @"comgooglemaps://?daddr=Faraona+11,+Pruszkow&
          NSLog(@"notification [%@]", reportMsg);
         [self setLeftMonit: reportMsg];
         
+        [self processDailyReport:places];
+        
         NSMutableString *monit = [[NSMutableString alloc] init];
         [monit appendString:[self getFastReportMessage:rows byDate:now_plus_1]];
         [monit appendString:[self getFastReportMessage:rows byDate:now_plus_2]];
@@ -319,6 +430,13 @@ static NSString *const kHomeURL = @"comgooglemaps://?daddr=Faraona+11,+Pruszkow&
         [monit appendString:[self getFastReportMessage:rows byDate:now_plus_4]];
         [monit appendString:[self getFastReportMessage:rows byDate:now_plus_5]];
         [self setRightMonit: monit];
+        
+        [self processFastReport:rows byDate:now_plus_1 withButtonDay:_dayOfMonth0 withButtonFree:_freedays0 withButtonStatus:_satus0];
+        [self processFastReport:rows byDate:now_plus_2 withButtonDay:_dayOfMonth1 withButtonFree:_freedays1 withButtonStatus:_satus1];
+        [self processFastReport:rows byDate:now_plus_3 withButtonDay:_dayOfMonth2 withButtonFree:_freedays2 withButtonStatus:_satus2];
+        [self processFastReport:rows byDate:now_plus_4 withButtonDay:_dayOfMonth3 withButtonFree:_freedays3 withButtonStatus:_satus3];
+        [self processFastReport:rows byDate:now_plus_5 withButtonDay:_dayOfMonth4 withButtonFree:_freedays4 withButtonStatus:_satus4];
+        
         NSLog(@"OUT %@.", monit);
         
 
