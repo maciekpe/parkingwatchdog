@@ -17,12 +17,10 @@
 @interface ViewController ()<CLLocationManagerDelegate>
 
 @property (nonatomic, strong) GTLService *service;
-@property (weak, nonatomic) IBOutlet UITextView *textViewRight;
 @property (strong, nonatomic) IBOutlet UIView *mainView;
 @property (weak, nonatomic) IBOutlet UIButton *workBtn;
 @property (weak, nonatomic) IBOutlet UIButton *homeBtn;
 @property (weak, nonatomic) IBOutlet UIButton *analysisBtn;
-@property (weak, nonatomic) IBOutlet UITextView *textViewLeft;
 @property (weak, nonatomic) IBOutlet UIButton *place0Number;
 @property (weak, nonatomic) IBOutlet UIButton *place1Number;
 @property (weak, nonatomic) IBOutlet UIButton *place2Number;
@@ -33,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *place2How;
 @property (weak, nonatomic) IBOutlet UIButton *place3How;
 @property (weak, nonatomic) IBOutlet UIButton *place4How;
+@property (weak, nonatomic) IBOutlet UIButton *notifBtn;
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *dayOfMonth0;
 @property (weak, nonatomic) IBOutlet UIButton *dayOfMonth1;
@@ -79,28 +79,40 @@ static NSString *const kHomeURL = @"comgooglemaps://?daddr=Faraona+11,+Pruszkow&
 - (void)initViewElements {;
     self.navigationItem.title = @"WatchDog";
     if(_workBtn != nil){
-        _workBtn.layer.cornerRadius = 5;
+        //_workBtn.layer.cornerRadius = 5;
+        [self processDefaultButton:_workBtn];
+    }
+    
+    if(_notifBtn != nil){
+        //_workBtn.layer.cornerRadius = 5;
+        [self processDefaultButton:_notifBtn];
+    }
+    
+    if(_textLabel != nil){
+        //_workBtn.layer.cornerRadius = 5;
+        _textLabel.layer.cornerRadius = 7;
     }
     
     if(_homeBtn != nil){
-        _homeBtn.layer.cornerRadius = 5;
+        //_homeBtn.layer.cornerRadius = 5;
+        [self processDefaultButton:_homeBtn];
     }
     
     if(_analysisBtn != nil){
         _analysisBtn.layer.cornerRadius = 5;
     }
     
-    if(_textViewRight != nil){
-        _textViewRight.layer.cornerRadius=5;
-        [_textViewRight setHidden:true];
-    }
-    
-    if(_textViewLeft != nil){
-        _textViewLeft.layer.cornerRadius=5;
-        [_textViewLeft setHidden:true];
-    }
-    
+}
 
+- (void) processDefaultButton: (UIButton*) button {
+    //[button setTitle:text forState:UIControlStateNormal];
+    button.layer.cornerRadius = 7;
+    //UIImage *btnImage = [UIImage imageNamed:@"bulldog.jpg"];
+    //UIImage *newImage = [btnImage stretchableImageWithLeftCapWidth:20.0 topCapHeight:20.0];
+    //[button setImage:btnImage forState:UIControlStateNormal];
+    //[button setImageEdgeInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
+    //[button sizeToFit];
+    //[button setBackgroundImage:btnImage forState:UIControlStateNormal];
 }
 
 - (void)initGoogleServices {;
@@ -225,20 +237,6 @@ static NSString *const kHomeURL = @"comgooglemaps://?daddr=Faraona+11,+Pruszkow&
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
 
-- (void)setLeftMonit:(NSString *) text {
-    _textViewLeft.text = text;
-    _textViewLeft.textAlignment=NSTextAlignmentCenter;
-    _textViewLeft.font = [UIFont boldSystemFontOfSize:16];
-    _textViewLeft.textColor=[UIColor blackColor];
-}
-
-- (void)setRightMonit:(NSString *) text {
-    _textViewRight.text = text;
-    _textViewRight.textAlignment=NSTextAlignmentCenter;
-    _textViewRight.font = [UIFont boldSystemFontOfSize:16];
-    _textViewRight.textColor=[UIColor blackColor];
-}
-
 - (NSString*)getRowSelector:(NSDate *) date {
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     [df setDateFormat:@"dd'.'MM"];
@@ -321,7 +319,8 @@ static NSString *const kHomeURL = @"comgooglemaps://?daddr=Faraona+11,+Pruszkow&
         [button setTitle:text forState:UIControlStateNormal];
         button.layer.cornerRadius = 5;
         if(isGreen){
-            [button setBackgroundColor:[UIColor greenColor]];
+            
+            [button setBackgroundColor:[UIColor colorWithRed:38.0/255.0 green:158.0/255.0 blue:9.0/255.0 alpha:1]];
         }
         if(isRed){
             [button setBackgroundColor:[UIColor redColor]];
@@ -333,9 +332,6 @@ static NSString *const kHomeURL = @"comgooglemaps://?daddr=Faraona+11,+Pruszkow&
         [button setNeedsLayout];
         [button layoutIfNeeded];
     });
-    
-    
-
 }
 
 
@@ -419,7 +415,6 @@ static NSString *const kHomeURL = @"comgooglemaps://?daddr=Faraona+11,+Pruszkow&
         NSString *reportMsg = [self getReportMessage:places];
         [self sendNotificationWith:reportMsg withDelay:1200];
          NSLog(@"notification [%@]", reportMsg);
-        [self setLeftMonit: reportMsg];
         
         [self processDailyReport:places];
         
@@ -429,7 +424,6 @@ static NSString *const kHomeURL = @"comgooglemaps://?daddr=Faraona+11,+Pruszkow&
         [monit appendString:[self getFastReportMessage:rows byDate:now_plus_3]];
         [monit appendString:[self getFastReportMessage:rows byDate:now_plus_4]];
         [monit appendString:[self getFastReportMessage:rows byDate:now_plus_5]];
-        [self setRightMonit: monit];
         
         [self processFastReport:rows byDate:now_plus_1 withButtonDay:_dayOfMonth0 withButtonFree:_freedays0 withButtonStatus:_satus0];
         [self processFastReport:rows byDate:now_plus_2 withButtonDay:_dayOfMonth1 withButtonFree:_freedays1 withButtonStatus:_satus1];
