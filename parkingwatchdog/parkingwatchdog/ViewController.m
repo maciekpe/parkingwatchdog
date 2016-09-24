@@ -59,8 +59,11 @@ static NSString *const kKeychainItemName = @"parkingwatchdog";
 static NSString *const kClientID = @"829224129199-o2i8n6lijmj02sqftomb2g0h5gtan4en.apps.googleusercontent.com";
 static NSString *const kWorkURL = @"comgooglemaps://?saddr=Faraona+11,+Pruszkow&daddr=Aleje+Jerozolimskie+92,+Warszawa&views=traffic&directionsmode=driving";
 static NSString *const kHomeURL = @"comgooglemaps://?daddr=Faraona+11,+Pruszkow&saddr=Aleje+Jerozolimskie+92,+Warszawa&views=traffic&directionsmode=driving";
+static NSString *kPlacesLabels[5] = {@"360",@"136", @"137", @"356", @"28"};
 static NSArray *kAllMsgArray = nil;
 static NSString *kMsgWhenNavi = nil;
+static NSString *const kPersonSelector = @"MaciekP";
+static NSString *const kFreeLabel = @"WOLNE";
 
 @implementation ViewController
 
@@ -127,25 +130,12 @@ static NSString *kMsgWhenNavi = nil;
     
     [self processButtonToHidden:_todayBtn];
     [self processButtonToHidden:_nextDaysBtn];
-    
-    //[self processButtonToHidden:_notifBtn];
-    //[self processButtonToHidden:_notif11];
-    //[self processButtonToHidden:_notif12];
-    //[self processButtonToHidden:_notif21];
-    //[self processButtonToHidden:_notif22];
 }
 
 - (void) processDefaultButton: (UIButton*) button {
-    //[button setTitle:text forState:UIControlStateNormal];
     if(button != nil){
         button.layer.cornerRadius = 7;
     }
-    //UIImage *btnImage = [UIImage imageNamed:@"bulldog.jpg"];
-    //UIImage *newImage = [btnImage stretchableImageWithLeftCapWidth:20.0 topCapHeight:20.0];
-    //[button setImage:btnImage forState:UIControlStateNormal];
-    //[button setImageEdgeInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
-    //[button sizeToFit];
-    //[button setBackgroundImage:btnImage forState:UIControlStateNormal];
 }
 
 - (void) processButtonToHidden: (UIButton*) button {
@@ -303,8 +293,8 @@ static NSString *kMsgWhenNavi = nil;
 }
 
 - (NSArray*)findRowElements:(NSArray *) rows bySelector: (NSString*) selector {
-    NSMutableArray *result = [NSMutableArray arrayWithObjects:@"WOLNE",
-                              @"WOLNE", @"WOLNE", @"WOLNE", @"WOLNE", nil];
+    NSMutableArray *result = [NSMutableArray arrayWithObjects:kFreeLabel,
+                              kFreeLabel, kFreeLabel, kFreeLabel, kFreeLabel, nil];
     if (rows.count > 0) {
         for (NSArray *row in rows) {
             if(row.count > 1){
@@ -325,39 +315,44 @@ static NSString *kMsgWhenNavi = nil;
 }
 
 - (NSString*) getReportMessage:(NSArray*) places {
-    NSMutableString *output = [[NSMutableString alloc] init];
-    [output appendFormat:@"[360->%@]\n[136->%@]\n[137->%@]\n[356->%@]\n[28->%@]",  places[0], places[1], places[2],  places[3], places[4]];
-    return [output copy];
+    for (int i=0; i<[places count]; i++) {
+        NSString* person = places[i];
+        if ([person containsString:kPersonSelector]){
+             NSLog(@"report message: %@ , %@.", person, kPlacesLabels[i]);
+            return kPlacesLabels[i];
+        }
+    }
+    return nil;
 }
 
 - (void) processDailyReport:(NSArray*) places {
     NSMutableString *output = [[NSMutableString alloc] init];
     [output appendFormat:@"[360->%@]\n[136->%@]\n[137->%@]\n[356->%@]\n[28->%@]",  places[0], places[1], places[2],  places[3], places[4]];
-    [self processButton:_place0How withValue:places[0] withGreen:[places[0] containsString:@"MaciekP"] withRed:NO withGrey:[places[0] containsString:@"WOLNE"]];
-    [self processButton:_place1How withValue:places[1] withGreen:[places[1] containsString:@"MaciekP"] withRed:NO withGrey:[places[1] containsString:@"WOLNE"]];
-    [self processButton:_place2How withValue:places[2] withGreen:[places[2] containsString:@"MaciekP"] withRed:NO withGrey:[places[2] containsString:@"WOLNE"]];
-    [self processButton:_place3How withValue:places[3] withGreen:[places[3] containsString:@"MaciekP"] withRed:NO withGrey:[places[3] containsString:@"WOLNE"]];
-    [self processButton:_place4How withValue:places[4] withGreen:[places[4] containsString:@"MaciekP"] withRed:NO withGrey:[places[4] containsString:@"WOLNE"]];
-    [self processButton:_place0Number withValue:@"360" withGreen:[places[0] containsString:@"MaciekP"] withRed:NO withGrey:[places[0] containsString:@"WOLNE"]];
-    [self processButton:_place1Number withValue:@"136" withGreen:[places[1] containsString:@"MaciekP"] withRed:NO withGrey:[places[1] containsString:@"WOLNE"]];
-    [self processButton:_place2Number withValue:@"137" withGreen:[places[2] containsString:@"MaciekP"] withRed:NO withGrey:[places[2] containsString:@"WOLNE"]];
-    [self processButton:_place3Number withValue:@"356" withGreen:[places[3] containsString:@"MaciekP"] withRed:NO withGrey:[places[3] containsString:@"WOLNE"]];
-    [self processButton:_place4Number withValue:@"28" withGreen:[places[4] containsString:@"MaciekP"] withRed:NO withGrey:[places[4] containsString:@"WOLNE"]];
+    [self processButton:_place0How withValue:places[0] withGreen:[places[0] containsString:kPersonSelector] withRed:NO withGrey:[places[0] containsString:kFreeLabel]];
+    [self processButton:_place1How withValue:places[1] withGreen:[places[1] containsString:kPersonSelector] withRed:NO withGrey:[places[1] containsString:kFreeLabel]];
+    [self processButton:_place2How withValue:places[2] withGreen:[places[2] containsString:kPersonSelector] withRed:NO withGrey:[places[2] containsString:kFreeLabel]];
+    [self processButton:_place3How withValue:places[3] withGreen:[places[3] containsString:kPersonSelector] withRed:NO withGrey:[places[3] containsString:kFreeLabel]];
+    [self processButton:_place4How withValue:places[4] withGreen:[places[4] containsString:kPersonSelector] withRed:NO withGrey:[places[4] containsString:kFreeLabel]];
+    [self processButton:_place0Number withValue:kPlacesLabels[0] withGreen:[places[0] containsString:kPersonSelector] withRed:NO withGrey:[places[0] containsString:kFreeLabel]];
+    [self processButton:_place1Number withValue:kPlacesLabels[1] withGreen:[places[1] containsString:kPersonSelector] withRed:NO withGrey:[places[1] containsString:kFreeLabel]];
+    [self processButton:_place2Number withValue:kPlacesLabels[2] withGreen:[places[2] containsString:kPersonSelector] withRed:NO withGrey:[places[2] containsString:kFreeLabel]];
+    [self processButton:_place3Number withValue:kPlacesLabels[3] withGreen:[places[3] containsString:kPersonSelector] withRed:NO withGrey:[places[3] containsString:kFreeLabel]];
+    [self processButton:_place4Number withValue:kPlacesLabels[4] withGreen:[places[4] containsString:kPersonSelector] withRed:NO withGrey:[places[4] containsString:kFreeLabel]];
 }
 
 - (void) processFutureReport:(NSArray*) places {
     NSMutableString *output = [[NSMutableString alloc] init];
     [output appendFormat:@"[360->%@]\n[136->%@]\n[137->%@]\n[356->%@]\n[28->%@]",  places[0], places[1], places[2],  places[3], places[4]];
-    [self processButton:_place0How withValue:places[0] withGreen:[places[0] containsString:@"MaciekP"] withRed:NO withGrey:[places[0] containsString:@"WOLNE"]];
-    [self processButton:_place1How withValue:places[1] withGreen:[places[1] containsString:@"MaciekP"] withRed:NO withGrey:[places[1] containsString:@"WOLNE"]];
-    [self processButton:_place2How withValue:places[2] withGreen:[places[2] containsString:@"MaciekP"] withRed:NO withGrey:[places[2] containsString:@"WOLNE"]];
-    [self processButton:_place3How withValue:places[3] withGreen:[places[3] containsString:@"MaciekP"] withRed:NO withGrey:[places[3] containsString:@"WOLNE"]];
-    [self processButton:_place4How withValue:places[4] withGreen:[places[4] containsString:@"MaciekP"] withRed:NO withGrey:[places[4] containsString:@"WOLNE"]];
-    [self processButton:_place0Number withValue:@"360" withGreen:[places[0] containsString:@"MaciekP"] withRed:NO withGrey:[places[0] containsString:@"WOLNE"]];
-    [self processButton:_place1Number withValue:@"136" withGreen:[places[1] containsString:@"MaciekP"] withRed:NO withGrey:[places[1] containsString:@"WOLNE"]];
-    [self processButton:_place2Number withValue:@"137" withGreen:[places[2] containsString:@"MaciekP"] withRed:NO withGrey:[places[2] containsString:@"WOLNE"]];
-    [self processButton:_place3Number withValue:@"356" withGreen:[places[3] containsString:@"MaciekP"] withRed:NO withGrey:[places[3] containsString:@"WOLNE"]];
-    [self processButton:_place4Number withValue:@"28" withGreen:[places[4] containsString:@"MaciekP"] withRed:NO withGrey:[places[4] containsString:@"WOLNE"]];
+    [self processButton:_place0How withValue:places[0] withGreen:[places[0] containsString:kPersonSelector] withRed:NO withGrey:[places[0] containsString:kFreeLabel]];
+    [self processButton:_place1How withValue:places[1] withGreen:[places[1] containsString:kPersonSelector] withRed:NO withGrey:[places[1] containsString:kFreeLabel]];
+    [self processButton:_place2How withValue:places[2] withGreen:[places[2] containsString:kPersonSelector] withRed:NO withGrey:[places[2] containsString:kFreeLabel]];
+    [self processButton:_place3How withValue:places[3] withGreen:[places[3] containsString:kPersonSelector] withRed:NO withGrey:[places[3] containsString:kFreeLabel]];
+    [self processButton:_place4How withValue:places[4] withGreen:[places[4] containsString:kPersonSelector] withRed:NO withGrey:[places[4] containsString:kFreeLabel]];
+    [self processButton:_place0Number withValue:kPlacesLabels[0] withGreen:[places[0] containsString:kPersonSelector] withRed:NO withGrey:[places[0] containsString:kFreeLabel]];
+    [self processButton:_place1Number withValue:kPlacesLabels[1] withGreen:[places[1] containsString:kPersonSelector] withRed:NO withGrey:[places[1] containsString:kFreeLabel]];
+    [self processButton:_place2Number withValue:kPlacesLabels[2] withGreen:[places[2] containsString:kPersonSelector] withRed:NO withGrey:[places[2] containsString:kFreeLabel]];
+    [self processButton:_place3Number withValue:kPlacesLabels[3] withGreen:[places[3] containsString:kPersonSelector] withRed:NO withGrey:[places[3] containsString:kFreeLabel]];
+    [self processButton:_place4Number withValue:kPlacesLabels[4] withGreen:[places[4] containsString:kPersonSelector] withRed:NO withGrey:[places[4] containsString:kFreeLabel]];
 }
 
 - (void) processButton: (UIButton*) button withValue: (NSString*) text withGreen:(BOOL) isGreen withRed:(BOOL) isRed withGrey:(BOOL) isGrey{
@@ -404,8 +399,8 @@ static NSString *kMsgWhenNavi = nil;
     NSMutableString *output = [[NSMutableString alloc] init];
     NSString *dateRowSelector = [self getShortRowSelector:date];
     NSArray *places = [self getPlacesFrom:rows byDate:date];
-    int freeCount = [self countOcurrencesIn:places byElementValue:@"WOLNE"];
-    int myCount = [self countOcurrencesIn:places byElementValue:@"MaciekP"];
+    int freeCount = [self countOcurrencesIn:places byElementValue:kFreeLabel];
+    int myCount = [self countOcurrencesIn:places byElementValue:kPersonSelector];
     NSLog(@"freeCount [%d]", freeCount);
     NSLog(@"myCount [%d]", myCount);
     NSString* reserved = myCount != 0 ? @"OK" : @"NO";
@@ -416,8 +411,8 @@ static NSString *kMsgWhenNavi = nil;
 - (NSString*) notifyPendingReservation:(NSArray*) rows byDate:(NSDate*) date {
     NSString *dateRowSelector = [self getShortRowSelector:date];
     NSArray *places = [self getPlacesFrom:rows byDate:date];
-    int freeCount = [self countOcurrencesIn:places byElementValue:@"WOLNE"];
-    int myCount = [self countOcurrencesIn:places byElementValue:@"MaciekP"];
+    int freeCount = [self countOcurrencesIn:places byElementValue:kFreeLabel];
+    int myCount = [self countOcurrencesIn:places byElementValue:kPersonSelector];
     NSLog(@"freeCount [%d]", freeCount);
     NSLog(@"myCount [%d]", myCount);
     NSString* reserved = myCount != 0 ? @"OK" : @"NO";
@@ -432,8 +427,8 @@ static NSString *kMsgWhenNavi = nil;
 - (NSArray*) getFastReportVector:(NSArray*) rows byDate:(NSDate*) date {
     NSString *dateRowSelector = [self getShortRowSelector:date];
     NSArray *places = [self getPlacesFrom:rows byDate:date];
-    int freeCount = [self countOcurrencesIn:places byElementValue:@"WOLNE"];
-    int myCount = [self countOcurrencesIn:places byElementValue:@"MaciekP"];
+    int freeCount = [self countOcurrencesIn:places byElementValue:kFreeLabel];
+    int myCount = [self countOcurrencesIn:places byElementValue:kPersonSelector];
     NSLog(@"freeCount [%d]", freeCount);
     NSLog(@"myCount [%d]", myCount);
     NSMutableArray *result = [NSMutableArray arrayWithObjects:dateRowSelector, nil];
