@@ -262,6 +262,7 @@ static NSString *kMsgWhenNavi = nil;
 }
 
 - (IBAction)wayToWorkAction:(id)sender {
+    [self sendNavigationMsg];
     [self openGoogleMapsWith:kWorkURL];
 }
 - (IBAction)wayToHomeAction:(id)sender {

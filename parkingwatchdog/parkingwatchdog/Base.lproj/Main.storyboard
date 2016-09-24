@@ -198,10 +198,10 @@
                                 <rect key="frame" x="24" y="270" width="560" height="282"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Wx-wR-fpo">
-                                        <rect key="frame" x="280.5" y="1" width="279.5" height="281"/>
+                                        <rect key="frame" x="281" y="1" width="279" height="281"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lR2-TA-b3g">
-                                                <rect key="frame" x="1" y="57" width="277.5" height="55"/>
+                                                <rect key="frame" x="1" y="57" width="278" height="55"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omK-o4-UPh" userLabel="dayOfMonth1">
                                                         <rect key="frame" x="4" y="4" width="87" height="47"/>
@@ -211,14 +211,14 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akd-5e-CnS" userLabel="freedays1">
-                                                        <rect key="frame" x="95" y="4" width="87.5" height="47"/>
+                                                        <rect key="frame" x="95" y="4" width="88" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" title="360">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoU-Ql-jtC" userLabel="satus1">
-                                                        <rect key="frame" x="186.5" y="4" width="87" height="47"/>
+                                                        <rect key="frame" x="187" y="4" width="87" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" title="WOLNE">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -244,7 +244,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NqR-Gu-65M">
-                                                <rect key="frame" x="1" y="113" width="277.5" height="55"/>
+                                                <rect key="frame" x="1" y="113" width="278" height="55"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJo-1b-nD1" userLabel="dayOfMonth2">
                                                         <rect key="frame" x="4" y="4" width="87" height="47"/>
@@ -254,14 +254,14 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SF4-xG-30T" userLabel="freedays2">
-                                                        <rect key="frame" x="95" y="4" width="87.5" height="47"/>
+                                                        <rect key="frame" x="95" y="4" width="88" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" title="360">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ne-hs-bc3" userLabel="satus2">
-                                                        <rect key="frame" x="186.5" y="4" width="87" height="47"/>
+                                                        <rect key="frame" x="187" y="4" width="87" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" title="WOLNE">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -287,7 +287,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSF-HF-VZ5">
-                                                <rect key="frame" x="1" y="169" width="277.5" height="55"/>
+                                                <rect key="frame" x="1" y="169" width="278" height="55"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssa-Yr-juJ" userLabel="dayOfMonth3">
                                                         <rect key="frame" x="4" y="4" width="87" height="47"/>
@@ -297,14 +297,14 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7Q-jF-PmZ" userLabel="freedays3">
-                                                        <rect key="frame" x="95" y="4" width="87.5" height="47"/>
+                                                        <rect key="frame" x="95" y="4" width="88" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" title="360">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJk-OR-lwA" userLabel="satus3">
-                                                        <rect key="frame" x="186.5" y="4" width="87" height="47"/>
+                                                        <rect key="frame" x="187" y="4" width="87" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" title="WOLNE">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -330,7 +330,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wgZ-lB-dle">
-                                                <rect key="frame" x="1" y="1" width="277.5" height="55"/>
+                                                <rect key="frame" x="1" y="1" width="278" height="55"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cch-4v-mMC" userLabel="dayOfMonth0">
                                                         <rect key="frame" x="4" y="4" width="87" height="47"/>
@@ -340,14 +340,14 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhv-0N-uaD" userLabel="freedays0">
-                                                        <rect key="frame" x="95" y="4" width="87.5" height="47"/>
+                                                        <rect key="frame" x="95" y="4" width="88" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" title="360">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZ9-BF-zwh" userLabel="satus0">
-                                                        <rect key="frame" x="186.5" y="4" width="87" height="47"/>
+                                                        <rect key="frame" x="187" y="4" width="87" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" title="WOLNE">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -373,7 +373,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sq-pY-gp8">
-                                                <rect key="frame" x="1" y="225" width="277.5" height="55"/>
+                                                <rect key="frame" x="1" y="225" width="278" height="55"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0f-JJ-Xt5" userLabel="dayOfMonth4">
                                                         <rect key="frame" x="4" y="4" width="87" height="47"/>
@@ -383,14 +383,14 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQn-a5-DGO" userLabel="freedays4">
-                                                        <rect key="frame" x="95" y="4" width="87.5" height="47"/>
+                                                        <rect key="frame" x="95" y="4" width="88" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" title="360">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5BU-JX-bF2" userLabel="satus4">
-                                                        <rect key="frame" x="186.5" y="4" width="87" height="47"/>
+                                                        <rect key="frame" x="187" y="4" width="87" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" title="WOLNE">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -445,20 +445,20 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XBs-dt-b74">
-                                        <rect key="frame" x="1" y="1" width="278.5" height="280"/>
+                                        <rect key="frame" x="1" y="1" width="279" height="280"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEH-1t-K6C">
-                                                <rect key="frame" x="1" y="1" width="276.5" height="55"/>
+                                                <rect key="frame" x="1" y="1" width="277" height="55"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62l-2y-n3H" userLabel="place0Number">
-                                                        <rect key="frame" x="4" y="4" width="132.5" height="47"/>
+                                                        <rect key="frame" x="4" y="4" width="133" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncP-Ti-aXx" userLabel="place0How">
-                                                        <rect key="frame" x="140.5" y="4" width="132" height="47"/>
+                                                        <rect key="frame" x="141" y="4" width="132" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <state key="normal">
@@ -480,17 +480,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcy-4a-OUX">
-                                                <rect key="frame" x="1" y="112.5" width="276.5" height="55"/>
+                                                <rect key="frame" x="1" y="113" width="277" height="55"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFt-lD-UEM" userLabel="place2Number">
-                                                        <rect key="frame" x="4" y="4" width="132.5" height="47"/>
+                                                        <rect key="frame" x="4" y="4" width="133" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8m4-1s-7tO" userLabel="place2How">
-                                                        <rect key="frame" x="140.5" y="4" width="132" height="47"/>
+                                                        <rect key="frame" x="141" y="4" width="132" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <state key="normal">
@@ -512,17 +512,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpc-3Y-Fb9">
-                                                <rect key="frame" x="1" y="57" width="276.5" height="54.5"/>
+                                                <rect key="frame" x="1" y="57" width="277" height="55"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqH-2i-Gm5" userLabel="place1Number">
-                                                        <rect key="frame" x="4" y="4" width="132.5" height="46.5"/>
+                                                        <rect key="frame" x="4" y="4" width="133" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ud-jV-fvd" userLabel="place1How">
-                                                        <rect key="frame" x="140.5" y="4" width="132" height="46.5"/>
+                                                        <rect key="frame" x="141" y="4" width="132" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <state key="normal">
@@ -544,17 +544,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dag-cA-utZ">
-                                                <rect key="frame" x="1" y="168.5" width="276.5" height="54.5"/>
+                                                <rect key="frame" x="1" y="169" width="277" height="54"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHi-Y5-h0F" userLabel="place3Number">
-                                                        <rect key="frame" x="4" y="4" width="132.5" height="46.5"/>
+                                                        <rect key="frame" x="4" y="4" width="133" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUD-Xr-CcX" userLabel="place3How">
-                                                        <rect key="frame" x="140.5" y="4" width="132" height="46.5"/>
+                                                        <rect key="frame" x="141" y="4" width="132" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <state key="normal">
@@ -576,17 +576,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vds-9L-0gk">
-                                                <rect key="frame" x="1" y="224" width="276.5" height="55"/>
+                                                <rect key="frame" x="1" y="224" width="277" height="55"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38s-4Q-99U" userLabel="place4Number">
-                                                        <rect key="frame" x="4" y="4" width="132.5" height="47"/>
+                                                        <rect key="frame" x="4" y="4" width="133" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jO-xW-LI6" userLabel="place4How">
-                                                        <rect key="frame" x="140.5" y="4" width="132" height="47"/>
+                                                        <rect key="frame" x="141" y="4" width="132" height="47"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <state key="normal">
